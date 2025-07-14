@@ -6,10 +6,18 @@ import { nextCookies } from "better-auth/next-js";
 
 export const auth = betterAuth({
   socialProviders: {
-    google: {
-      clientId: process.env.GOOGLE_CLIENT_ID as string,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+    // google: {
+    //   clientId: process.env.GOOGLE_CLIENT_ID as string,
+    //   clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+    // },
+    twitter: {
+      clientId: process.env.TWITTER_CLIENT_ID as string,
+      clientSecret: process.env.TWITTER_CLIENT_SECRET as string,
     },
+    // linkedin: {
+    //   clientId: process.env.LINKEDIN_CLIENT_ID as string,
+    //   clientSecret: process.env.LINKEDIN_CLIENT_SECRET as string,
+    // },
   },
   database: drizzleAdapter(db, {
     provider: "pg",

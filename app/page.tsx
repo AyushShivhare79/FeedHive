@@ -13,7 +13,7 @@ import { authClient } from "@/lib/auth-client";
 
 const signIn = async () => {
   await authClient.signIn.social({
-    provider: "google",
+    provider: "twitter",
     callbackURL: "/dashboard",
   });
 };
